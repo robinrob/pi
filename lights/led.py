@@ -18,12 +18,12 @@ class Led:
 
 
     def on(self):
-        print "Setting pin " + str(self.pin) + " to ON"
+        # print "Setting pin " + str(self.pin) + " to ON"
         GPIO.output(self.pin, True)
 
 
     def off(self):
-        print "Setting pin " + str(self.pin) + " to OFF"
+        # print "Setting pin " + str(self.pin) + " to OFF"
         GPIO.output(self.pin, False)
 
 
