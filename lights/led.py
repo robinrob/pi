@@ -32,4 +32,4 @@ class Led:
             self.on()
             time.sleep(1.0 / freq)
             self.off()
-
+            time.sleep(1.0 / freq)
