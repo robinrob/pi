@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import sys
+
 from led import Led
 
 
