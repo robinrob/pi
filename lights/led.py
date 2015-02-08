@@ -28,7 +28,7 @@ class Led:
 
 
     def blink(self, freq):
-        print "Blinking at " + float(1.0 / self.freq) + " times per second ..."
+        print "Blinking at " + str(freq) + " times per second ..."
         while (True):
             self.on()
             time.sleep(1.0 / freq)
