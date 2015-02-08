@@ -6,28 +6,28 @@ import time
 
 class Led:
 
-    def __init__(pin):
+    def __init__(self, pin):
         self.pin = pin
 
         print "Using BOARD layout"
         GPIO.setmode(GPIO.BOARD)
-        GPIO.setwarnings(false)
+        GPIO.setwarnings(False)
 
         print "Setting pin " + str(self.pin) + " to OUT"
         GPIO.setup(self.pin, GPIO.OUT)
 
 
-    def on():
+    def on(self):
         print "Setting pin " + str(self.pin) + " to ON"
         GPIO.output(self.pin, True)
 
 
-    def off():
+    def off(self):
         print "Setting pin " + str(self.pin) + " to OFF"
         GPIO.output(self.pin, False)
 
 
-    def blink(freq):
+    def blink(self, freq):
         while (True):
             self.on()
             time.sleep(1.0 / freq)
