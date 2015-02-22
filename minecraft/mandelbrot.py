@@ -9,11 +9,11 @@ import minecraft
 class Complex:
     
     def __init__(self, real, imag):
-        self.real = x
-        self.image = y
+        self.x = real
+        self.y = imag
 
 
-    def square():
+    def square(self):
 	self.x = self.x * self.x - self.y * self.y
 	self.y = 2 * self.x * self.y
 
@@ -45,12 +45,14 @@ mc.setBlocks(-WIDTH / 2, 20, -HEIGHT / 2, WIDTH / 2, 20, HEIGHT /2, BACKGROUND_B
 
 
 # Do the calculation
+points = []
 complex = Complex(0, 0);
+print str(complex.x)
+print str(complex.y)
 points.append(complex)
 
-points = []
 for i in range(1, ITERATIONS):
-    complex = Complex(complex.x - CONSTANT, complex.y).squared()
+    complex = Complex(complex.x - CONSTANT, complex.y).square()
     points.append(complex)
 
 
