@@ -6,16 +6,7 @@ import sys, random
 sys.path.append("/home/pi/mcpi/api/python/mcpi")
 import minecraft
 
-class Complex:
-    
-    def __init__(self, real, imag):
-        self.x = real
-        self.y = imag
-
-
-    def square(self):
-	self.x = self.x * self.x - self.y * self.y
-	self.y = 2 * self.x * self.y
+from complex import Complex
 
 
 BACKGROUND_BLOCK = 155
