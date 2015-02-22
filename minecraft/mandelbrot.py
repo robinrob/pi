@@ -3,8 +3,8 @@
 #!/usr/bin/env python
 
 import sys, random
-sys.path.append("/home/pi/mcpi/api/python/mcpi")
-import minecraft
+# sys.path.append("/home/pi/mcpi/api/python/mcpi")
+# import minecraft
 
 from complex import Complex
 
@@ -18,9 +18,9 @@ WIDTH = HEIGHT * 7 / 4
 ITERATIONS=1000
 CONSTANT=-1
 
-mc = minecraft.Minecraft.create()
+# mc = minecraft.Minecraft.create()
 #mc.postToChat("Welcome to minecraft Maze!")
-mc.player.setTilePos(0, 25, 0)
+# mc.player.setTilePos(0, 25, 0)
 
 x_min = -2.5
 x_max = 1
@@ -32,14 +32,12 @@ y_max = 1
 y_range = (y_max - y_min)
 dy = y_range / HEIGHT
 
-mc.setBlocks(-WIDTH / 2, 20, -HEIGHT / 2, WIDTH / 2, 20, HEIGHT /2, BACKGROUND_BLOCK)
+# mc.setBlocks(-WIDTH / 2, 20, -HEIGHT / 2, WIDTH / 2, 20, HEIGHT /2, BACKGROUND_BLOCK)
 
 
 # Do the calculation
 points = []
 complex = Complex(0, 0);
-print str(complex.x)
-print str(complex.y)
 points.append(complex)
 
 for i in range(1, ITERATIONS):
@@ -50,6 +48,8 @@ for i in range(1, ITERATIONS):
 
 # Plot the points
 for point in points:
-    mc.setBlock(point.x, 20, point.y, FOREGROUND_BLOCK)
+    print point.x
+    print point.y
+    # mc.setBlock(point.x, 20, point.y, FOREGROUND_BLOCK)
 
 

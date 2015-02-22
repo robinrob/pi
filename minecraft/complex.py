@@ -8,4 +8,5 @@ class Complex:
     def square(self):
 	self.x = self.x * self.x - self.y * self.y
 	self.y = 2 * self.x * self.y
+        return self
 
