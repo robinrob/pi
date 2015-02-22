@@ -6,6 +6,16 @@ import sys, random
 sys.path.append("/home/pi/mcpi/api/python/mcpi")
 import minecraft
 
+class Complex:
+    
+    def __init__(self, real, imag):
+        self.real = x
+        self.image = y
+
+
+    def square():
+	self.x = self.x * self.x - self.y * self.y
+	self.y = 2 * self.x * self.y
 
 
 BACKGROUND_BLOCK = 155
@@ -48,3 +58,5 @@ for i in range(1, ITERATIONS):
 # Plot the points
 for point in points:
     mc.setBlock(point.x, 20, point.y, FOREGROUND_BLOCK)
+
+
